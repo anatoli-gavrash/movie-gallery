@@ -1,0 +1,68 @@
+@import 'base-variables.scss';
+
+%button-base-style {
+  font-family: $base_font;
+  flex-shrink: 0;
+  min-width: 120px;
+  min-height: 37px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 19px;
+  font-weight: 700;
+  box-shadow: 0px 0px 0px 0px $base_color;
+  transition: box-shadow 0.2s;
+}
+
+.button {
+  @extend %button-base-style;
+  background-color: $base_color;
+  color: white;
+
+  &:hover {
+    box-shadow: $hover_shadow $shadow_color;
+  }
+
+  &:active {
+    transition: $active_transition;
+    box-shadow: $active_shadow $shadow_color, $active_inset_shadow $inset_shadow_color;
+  }
+}
+
+.button-alt {
+  @extend %button-base-style;
+  border: 3px solid $base_color;
+  background-color: $background_color;
+  color: $base_color;
+
+  &:hover {
+    box-shadow: $hover_shadow $shadow_color;
+  }
+
+  &:active {
+    transition: $active_transition;
+    box-shadow: $active_shadow $shadow_color, $active_inset_shadow $shadow_color;
+  }
+}
+
+.button-link {
+  @extend %button-base-style;
+  text-decoration: none;
+  text-align: center;
+  border: 3px solid $base_color;
+  background-color: $background_color;
+  color: $base_color;
+
+  &:hover {
+    box-shadow: $hover_shadow $shadow_color;
+  }
+  
+  &:active {
+    transition: $active_transition;
+    box-shadow: $active_shadow $shadow_color, $active_inset_shadow $shadow_color;
+  }
+}
+
+.button-disable {
+  display: none;
+}

@@ -1,0 +1,116 @@
+@import 'base-variables.scss';
+
+.add-film__form {
+  display: grid;
+  grid-template-columns: 1fr 10px 1fr;
+  grid-template-areas: 
+    "a a a"
+    "b b b"
+    "c . h"
+    "d . h"
+    "e . h"
+    "f . h"
+    "g . h"
+    "i i i"
+    "j j j";
+
+  .form-add-film__item-wrapper:nth-child(1) {
+    grid-area: a;
+  } .form-add-film__item-wrapper:nth-child(2) {
+    grid-area: b;
+  } .form-add-film__item-wrapper:nth-child(3) {
+    grid-area: c;
+  } .form-add-film__item-wrapper:nth-child(4) {
+    grid-area: d;
+  } .form-add-film__item-wrapper:nth-child(5) {
+    grid-area: e;
+  } .form-add-film__item-wrapper:nth-child(6) {
+    grid-area: f;
+  } .form-add-film__item-wrapper:nth-child(7) {
+    grid-area: g;
+  } .form-add-film__item-wrapper:nth-child(8) {
+    grid-area: h;
+  } .form-add-film__item-wrapper:nth-child(9) {
+    grid-area: i;
+  } .form-add-film__button-wrapper {
+    grid-area: j;
+  }
+
+  .form-add-film__item-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+
+    &:nth-last-child(2) {
+      flex-direction: row;
+      align-items: center;
+      column-gap: 7px;
+    }
+
+    .form-add-film__label,
+    .form-add-film__label-error {
+      margin-left: 5px;
+      font-weight: 600;
+    }
+
+    .form-add-film__label-error {
+      color: $error_color;
+      font-size: 15px;
+    }
+
+    .form-add-film__input {
+      padding: 5px;
+      border: 2px solid $base_color;
+      border-radius: 5px;
+      font-weight: 600;
+      background-color: $background_color;
+      color: $base_color;
+    }
+
+    .form-add-film__textarea {
+      resize: vertical;
+      min-height: 100px;
+      padding: 5px;
+      border: 2px solid $base_color;
+      border-radius: 5px;
+      font-weight: 600;
+      background-color: $background_color;
+      color: $base_color;
+    }
+
+    .form-add-film__select-list {
+      height: 100%;
+      border: 2px solid $base_color;
+      border-radius: 5px;
+      font-weight: 600;
+      color: $base_color;
+      background-color: $background_color;
+    }
+
+    .form-add-film__input:hover,
+    .form-add-film__textarea:hover,
+    .form-add-film__select-list:hover {
+      box-shadow: $hover_shadow $shadow_color;
+    }
+
+    .form-add-film__input:active,
+    .form-add-film__textarea:active,
+    .form-add-film__select-list:active {
+      transition: box-shadow 0.1s;
+      box-shadow: $active_shadow $shadow_color, $active_inset_shadow $shadow_color;
+    }
+
+    .form-add-film__input:focus,
+    .form-add-film__textarea:focus,
+    .form-add-film__select-list:focus {
+      box-shadow: $active_shadow $shadow_color, $active_inset_shadow $shadow_color;
+    }
+  }
+
+  .form-add-film__button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    column-gap: 15px;
+  }
+}

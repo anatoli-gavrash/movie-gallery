@@ -1,0 +1,51 @@
+@import 'base-variables.scss';
+
+.film-details__form {
+  display: none;
+  align-items: center;
+  column-gap: 10px;
+  flex-wrap: wrap;
+
+  .form-vote__item-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    .form-vote__label,
+    .form-vote__label-error {
+      margin-left: 5px;
+      font-weight: 600;
+    }
+
+    .form-vote__label-error {
+      color: $error_color;
+      font-size: 15px;
+    }
+
+    .form-vote__input {
+      padding: 5px;
+      border: 2px solid $base_color;
+      border-radius: 5px;
+      font-weight: 600;
+      background-color: $background_color;
+      color: $base_color;
+
+      &:hover {
+        box-shadow: $hover_shadow $shadow_color;
+      }
+      
+      &:active {
+        transition: box-shadow 0.1s;
+        box-shadow: $active_shadow $shadow_color, $active_inset_shadow $shadow_color;
+      }
+      
+      &:focus {
+        box-shadow: $active_shadow $shadow_color, $active_inset_shadow $shadow_color;
+      }
+    }
+  }
+}
+
+.film-details__form--show {
+  display: flex;
+}

@@ -1,0 +1,30 @@
+@import 'base-variables.scss';
+
+.sorting__items {
+  min-width: 200px;
+  height: 30px;
+  border: 2px solid $base_color;
+  border-radius: 5px;
+  font-family: $base_font;
+  font-size: 16px;
+  font-weight: 600;
+  color: $base_color;
+  background-color: $background_color;
+
+  &:hover {
+    box-shadow: $hover_shadow $shadow_color;
+  }
+  
+  &:active {
+    transition: box-shadow 0.1s;
+    box-shadow: $active_shadow $shadow_color, $active_inset_shadow $shadow_color;
+  }
+  
+  &:focus {
+    box-shadow: $active_shadow $shadow_color, $active_inset_shadow $shadow_color;
+  }
+
+  .sorting__item {
+    font-weight: 600;
+  }
+}

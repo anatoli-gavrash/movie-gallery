@@ -1,0 +1,23 @@
+@import 'base-variables.scss';
+
+.video-list__item {
+  margin: 10px;
+  list-style-type: none;
+  box-shadow: 0px 0px 0px 0px $shadow_color;
+  border-radius: 11px 2px 11px 2px;
+  background-color: $background_color;
+  transition: box-shadow 0.2s, border-radius 0.2s;
+
+  &:hover {
+    box-shadow: 0px 0px 10px 3px $shadow_color;
+  }
+
+  .video-list__title {
+    text-align: center;
+    width: 150px;
+    padding: 2px 4px;
+    font-size: 16px;
+    font-weight: 900;
+  }
+}
+

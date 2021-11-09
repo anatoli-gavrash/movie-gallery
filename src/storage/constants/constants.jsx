@@ -1,0 +1,10 @@
+export const ADD_IN_BLACKLIST = 'ADD_IN_BLACKLIST';
+export const ADD_BLACKLIST = 'ADD_BLACKLIST';
+export const ADD_USER = 'ADD_USER';
+export const ADD_USERS = 'ADD_USERS';
+export const ADD_CURRENT_USER = 'ADD_CURRENT_USER';
+export const ADD_FILM = 'ADD_FILM';
+export const ADD_FILMS = 'ADD_FILMS';
+export const ADD_GENRES = 'ADD_GENRES';
+export const SORT_CHANGE = 'SORT_CHANGE';
+export const SHOW_MODAL_WINDOW = 'SHOW_MODAL_WINDOW';

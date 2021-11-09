@@ -1,1 +1,1 @@
-# movie-gallery
+# Movie Gallery

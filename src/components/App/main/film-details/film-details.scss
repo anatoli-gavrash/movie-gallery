@@ -1,0 +1,139 @@
+@import 'base-variables.scss';
+
+$text_border: 1px 0px 1px $base_color,
+              -1px 0px 1px $base_color,
+              0px 1px 1px $base_color,
+              0px -1px 1px $base_color,
+              1px 1px 1px $base_color,
+              -1px -1px 1px $base_color,
+              1px -1px 1px $base_color,
+              -1px 1px 1px $base_color,
+              ;
+
+.film-details {
+  display: flex;
+  max-width: 1024px;
+  margin: 50px auto 20px auto;
+  padding: 0 20px;
+  column-gap: 15px;
+
+  .film-details__title {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+}
+
+  /* Постер и кнопки */
+  .film-details__wrapper {
+    position: relative;
+    width: 100%;
+    min-width: 250px;
+    max-width: 500px;
+    border-radius: 25px 0 25px 0;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .film-details__poster {
+    display: block;
+    width: 100%;
+    border-radius: 25px 0 25px 0;
+  }
+
+  .film-details__button-delete,
+  .film-details__button-edit {
+    display: none;
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgb(77, 114, 154);
+    border-radius: 27% 0 27% 0;;
+    background-color: $background_color;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 3px 2px rgba(14, 91, 173, 0.5);
+  }
+
+  .film-details__button-delete {
+    top: 15px;
+    right: 15px;
+    background-image: url('/assets/images/recycle__icon.svg');
+  }
+
+  .film-details__button-edit {
+    top: 15px;
+    left: 15px;
+    background-image: url('/assets/images/edit__icon.svg');
+    background-size: 75%;
+  }
+
+  .show-button {
+    display: inline-block;
+  }
+  /* /Постер и кнопки */
+
+  /* Секция с информацией о фильме */
+  .film-details__block {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    row-gap: 10px;
+    max-height: 400px;
+    min-width: 250px;
+    max-width: 500px;
+    padding: 10px;
+    border: 3px solid $base_color;
+    border-radius: 20px;
+    font-weight: 600;
+    background-color: $background_color;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .film-details__block p span {
+    font-weight: 400;
+  }
+
+  .film-details__title {
+    width: max-content;
+    font-size: 30px;
+    letter-spacing: 1.5px;
+  }
+
+  .film-details__items-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  .text-rating {
+    display: inline-block;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    border: 3px solid rgb(77, 114, 154);
+    border-radius: 20px;
+  }
+
+  .text-rating--green {
+    color: rgb(17, 209, 0);
+    text-shadow: $text_border;
+  }
+
+  .text-rating--yellow {
+    color: rgb(230, 210, 0);
+    text-shadow: $text_border;
+  }
+
+  .text-rating--red {
+    color: rgb(184, 0, 0);
+    text-shadow: $text_border;
+  }
+
+  .text-overview {
+    overflow: auto;
+    max-height: 226px;
+  }
+  /* /Секция с информацией о фильме */

@@ -1,0 +1,51 @@
+@import 'base-variables.scss';
+
+.film-details__modal-window {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 0 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  .modal__form-wrapper {
+    position: relative;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 600px;
+    min-width: 451px;
+    border: 2px solid $base_color;
+    border-radius: 10px;
+    background-color: $background_color;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
+
+    .modal__title {
+      margin-left: 5px;
+      text-align: center;
+    }
+
+    .modal__close-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 20px;
+      height: 20px;
+      border: none;
+      background-image: url('/assets/images/delete__icon.svg');
+      background-size: 100%;
+      background-color: unset;
+    }
+    
+    .modal__delimeter {
+      height: 1px;
+      border: none;
+      background-color: $base_color;
+    }
+  }
+}
+
+.modal--show {
+  display: block;
+}

@@ -1,0 +1,35 @@
+@import 'base-variables.scss';
+
+.pagination__item {
+  list-style-type: none;
+
+  .pagination__link {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    min-width: 50px;
+    min-height: 30px;
+    margin: 0 1px;
+    padding: 5px 7px;
+    border: 2px solid $base_color;
+    border-radius: 5px;
+    background-color: $background_color;
+    color: $base_color;
+    font-weight: 600;
+    box-shadow: 0px 0px 0px 0px $shadow_color;
+    transition: box-shadow 0.2s;
+
+    &:hover {
+      box-shadow: 0px 0px 5px 1px $shadow_color;
+    }
+    
+    &:active {
+      transition: box-shadow 0.1s;
+      box-shadow: $active_shadow $shadow_color, inset 0px 0px 10px 2px $shadow_color;
+    }
+  }
+
+  &.active .pagination__link {
+    background-image: radial-gradient($shadow_color 0%, transparent 50%);
+  }
+}

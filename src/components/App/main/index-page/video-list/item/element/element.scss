@@ -1,0 +1,110 @@
+@import 'base-variables.scss';
+
+$text_border: 1px 0px 1px $base_color,
+              -1px 0px 1px $base_color,
+              0px 1px 1px $base_color,
+              0px -1px 1px $base_color,
+              1px 1px 1px $base_color,
+              -1px -1px 1px $base_color,
+              1px -1px 1px $base_color,
+              -1px 1px 1px $base_color,
+              ;
+
+.video-list__details-wrapper {
+  position: relative;
+  width: 150px;
+
+  .video-list__link {
+    display: block;
+    width: 150px;
+    height: 225px;
+    
+    .video-list__film-poster {
+      display: block;
+      width: 100%;
+      border-radius: 10px 2px;
+    }
+  }
+  
+  .video-list__rating,
+  .video-list__release-date,
+  .video-list__new-icon,
+  .video-list__admin-film-icon {
+    display: none;
+    position: absolute;
+    padding: 1px 2px 0 3px;
+    background-color: $background_color;
+    border: 1px solid $base_color;
+    border-radius: 5px 0 5px 0;
+    font-weight: 700;
+    box-shadow: 0px 0px 3px 2px $shadow_color;
+    background-color: $background_color;
+  }
+
+  .video-list__rating {
+    top: 10px;
+    left: 10px;
+  }
+
+  .video-list__new-icon {
+    top: 10px;
+    right: 10px;
+    color: rgb(184, 0, 0);
+    text-shadow: $text_border;
+  }
+
+  .video-list__rating--green {
+    color: rgb(17, 209, 0);
+    text-shadow: $text_border;
+  }
+  
+  .video-list__rating--yellow {
+    color: rgb(230, 210, 0);
+    text-shadow: $text_border;
+  }
+  
+  .video-list__rating--red {
+    color: rgb(184, 0, 0);
+    text-shadow: $text_border;
+  }
+  
+  .video-list__button-delete {
+    display: none;
+    position: absolute;
+    right: 10px;
+    bottom: 35px;
+    width: 21px;
+    height: 21px;
+    border: 1px solid $base_color;
+    border-radius: 5px 0 5px 0;
+    background-color: $background_color;
+    background-image: url('/assets/images/recycle__icon.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 3px 2px $shadow_color;
+  }
+
+  .video-list__admin-film-icon {
+    bottom: 10px;
+    left: 10px;
+    color: $base_color;
+  }
+  
+  .video-list__release-date {
+    right: 10px;
+    bottom: 10px;
+  }
+  
+  &:hover .video-list__rating,
+  &:focus .video-list__rating,
+  .video-list__new-icon--show,
+  .video-list__new-icon--show,
+  &:hover .show-button-delete,
+  &:focus .show-button-delete,
+  &:hover .video-list__admin-film-icon--show,
+  &:focus .video-list__admin-film-icon--show,
+  &:hover .video-list__release-date,
+  &:focus .video-list__release-date {
+    display: block;
+  }
+}

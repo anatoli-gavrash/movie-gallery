@@ -1,0 +1,22 @@
+@import 'base-variables.scss';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: $base_color;
+  background-image: url('assets/images/background.jpg');
+  background-attachment: fixed;
+
+  .root {
+    max-width: 1440px;
+    min-width: 364px;
+    margin: 0 auto;
+  }
+}

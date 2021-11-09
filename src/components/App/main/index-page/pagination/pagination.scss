@@ -1,0 +1,9 @@
+.gallery__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 0;
+  min-width: 300px;
+  height: 30px;
+}

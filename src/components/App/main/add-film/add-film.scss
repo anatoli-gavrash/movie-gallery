@@ -1,0 +1,23 @@
+@import 'base-variables.scss';
+
+.add-film {
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 600px;
+  min-width: 451px;
+  border: 2px solid $base_color;
+  border-radius: 10px;
+  background-color: $background_color;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
+
+  .add-film__title {
+    margin-left: 5px;
+    text-align: center;
+  }
+  
+  .add-film__delimeter {
+    height: 1px;
+    border: none;
+    background-color: $base_color;
+  }
+}

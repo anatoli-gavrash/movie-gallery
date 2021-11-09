@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "name": "Admin",
+      "surname": "Administrator",
+      "password": "Almighty",
+      "email": "administrator@list.rm",
+      "access": "admin"
+    }, {
+      "name": "Ritchie",
+      "surname": "Blackmore",
+      "password": "DeepPurple",
+      "email": "ritchie-blackmore@list.rm",
+      "access": "normal"
+    }, {
+      "name": "Dimebag",
+      "surname": "Darrell",
+      "password": "Pantera",
+      "email": "dimebag-darrell@list.rm",
+      "access": "normal"
+    }, {
+      "name": "Chester",
+      "surname": "Bennington",
+      "password": "LinkinPark",
+      "email": "chester-bennington@list.rm",
+      "access": "normal"
+    }, {
+      "name": "Chester",
+      "surname": "Bennington",
+      "password": "LinkinPark",
+      "email": "chesterg-bennington@list.rm",
+      "access": "normal"
+    }
+  ]
+}
